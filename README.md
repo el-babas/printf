@@ -1,4 +1,4 @@
-<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="400px" width="400px">
+<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="400px" width="800px">
 ## printf()
 ### Authors
 	+ Cristhian Apaza
