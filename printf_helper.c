@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strlen - length
@@ -51,12 +52,12 @@ int convert_base(int base, unsigned int num, char *s, unsigned int pos, int h)
 {
 	unsigned int n = num, count = 1;
 	char *temp;
-	int i = 0, j = 0;
+	int i = 0, j = 1;
 	char buf[17];
 	char *ptr;
 
 	_strncpy(buf, (h == 0) ? "0123456789ABCDEF" : "0123456789abcdef", 17);
-	while (n > 0)
+	while (n)
 	{
 		count++;
 		n /= base;
@@ -64,14 +65,15 @@ int convert_base(int base, unsigned int num, char *s, unsigned int pos, int h)
 	temp = malloc(sizeof(char) * (count + 1));
 	if (temp == NULL)
 		return (0);
-	ptr = &temp[count];
-	while (num > 0)
+	ptr = &temp[count + 1];
+	while (num)
 	{
 		*ptr = buf[num % base];
 		num = num / base;
 		ptr--, i++;
 	}
 	ptr[count + 1] = '\0';
+
 	while (i >= 0)
 	{
 		pos = fill_malloc(s, ptr[j], pos);

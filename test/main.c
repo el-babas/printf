@@ -3,7 +3,7 @@
 #include "../main.h"
 
 
-#define TAREA_NUM 1
+#define TAREA_NUM 0
 /**
  * main - Entry point
  *
