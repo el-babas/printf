@@ -3,7 +3,7 @@
 #include "../main.h"
 
 
-#define TAREA_NUM 0
+#define TAREA_NUM 2
 /**
  * main - Entry point
  *
@@ -18,9 +18,10 @@ int main(void)
     void *addr;
     char *save = NULL;
     int num = 76;
+    int result = -5; /* -5 is to avoid confusion with returning values -1 or 0 */
     /* vars for task 3 */
-      
-        
+
+
     switch (TAREA_NUM)
     {
       case 0:
@@ -76,6 +77,25 @@ int main(void)
           _printf("Address:[%p]\n", addr);
           printf("Address:[%p]\n", addr);
           break;
+
+    case 2:
+	    result = _printf("E - espacio post % y sin arg: % \n"); _printf("Result: %d\n", result); result = -5;
+	    result = _printf("E - espacio post y fin cadena % "); _printf("\nResult: %d\n", result); result = -5;
+	    result = _printf("E - espacio post y fin cadena + arg % ", '2'); _printf("\nResult: %d\n", result); result = -5;
+	    result = _printf("E - espacio post % con arg: % \n", 'a');  _printf("Result: %d\n", result); result = -5;
+	    result = _printf("Check C modf %c \n", 'c');  _printf("Result: %d\n", result); result = -5;
+	    result = _printf("Check C modf wrong arg %c \n", "char");  _printf("Result: %d\n", result); result = -5;
+
+	    _printf("\n\nCasos de Cristhian\n\n");
+
+	    result = _printf("\nsdsdsdsd% ddf"); _printf("\nResult: %d\n", result); result = -5;
+	    result = _printf("\nsdsdsdsd% "); _printf("\nResult: %d\n", result); result = -5;
+	    result = _printf("\nLon %d", 10); _printf("\nResult: %d\n", result); result = -5;
+
+	    _printf("\n\ncasos printf del std\n");
+	    result = printf("\nsdsdsdsd% ddf\n"); _printf("\nResult: %d\n", result); result = -5;
+	    
+	  break;
     
       default:
           break;

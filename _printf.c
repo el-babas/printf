@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			/* Get correct function */
 			chosen_fun = get_format_func(format, x + 1);
 			if (chosen_fun != NULL)
 			{
