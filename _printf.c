@@ -17,6 +17,10 @@ int _printf(const char *format, ...)
 	str_malloc = (char *)malloc(sizeof(char) * W_BUFFER);
 	if (format == NULL || str_malloc == NULL)
 		return (-1);
+	if (*(format) == '%' && *(format + 1) == '\0')
+		return (-1);
+	if (*(format) == '\0')
+		return (0);
 
 	va_start(args, format);
 	for (x = 0; *(format + x); x++)
