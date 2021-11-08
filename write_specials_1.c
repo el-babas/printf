@@ -18,7 +18,7 @@ int write_address(va_list args, char *str_malloc, unsigned int pos)
 	size_t i;
 
 	(void)pos;
-
+	(void)buff;
 	buff[0] = '0';
 	buff[1] = 'x';
 	for (i = 0; i < sizeof(x) * 2; i++)
