@@ -2,8 +2,8 @@
 
 ## printf()
 ### Authors
-	+ Cristhian Apaza
-	+ Carlon Bentin
+1. Carlon Bentin
+2. Cristhian Apaza
 
 
 ### Description
