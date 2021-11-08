@@ -47,13 +47,11 @@ int write_address(va_list args, char *str_malloc, unsigned int pos)
  */
 int write_perc(va_list args, char *str_malloc, unsigned int pos)
 {
-	int len = 0;
 	unsigned int c = va_arg(args, int);
 
 	(void)c;
-
-	len = fill_malloc(str_malloc, '%', pos);
-	return (len);
+	pos = fill_malloc(str_malloc, '%', pos);
+	return (1);
 }
 
 /**
