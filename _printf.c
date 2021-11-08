@@ -2,6 +2,7 @@
 /**
  * _printf - function like as printf in c
  * @format: string
+ *
  * Return: length of strinf print
  */
 int _printf(const char *format, ...)
@@ -16,6 +17,7 @@ int _printf(const char *format, ...)
 	str_malloc = (char *)malloc(sizeof(char) * W_BUFFER);
 	if (format == NULL || str_malloc == NULL)
 		return (-1);
+
 	va_start(args, format);
 	for (x = 0; *(format + x); x++)
 	{
