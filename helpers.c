@@ -75,7 +75,6 @@ int convert_base(int base, unsigned int num, int h)
 	}
 	while (n /= base)
 		_length++;
-	if (base == 2 && (_length == 0 &&)
 	temp = malloc(sizeof(char) * (_length + 1));
 	if (temp == NULL)
 	{
