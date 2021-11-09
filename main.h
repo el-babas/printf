@@ -4,7 +4,8 @@
 /* Library */
 #include <unistd.h>
 #include <stdarg.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct format_print - choose functions format
@@ -27,6 +28,10 @@ int write_str(va_list args);
 int write_perc(va_list args);
 int write_num(va_list args);
 int print_number(int n);
+int write_bin(va_list args);
+char *_strncpy(char *dest, char *src, int n);
+int convert_base(int base, unsigned int num, int h);
+
 
 int (*get_format_func(const char *format, int p))(va_list);
 

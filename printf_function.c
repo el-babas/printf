@@ -18,13 +18,14 @@ int (*get_format_func(const char *format, int p))(va_list)
 		{"%", write_perc},
 		{"d", write_num},
 		{"i", write_num},
+		{"b", write_bin},
 		{NULL, NULL}
 	};
 
 	int i;
 
 	i = 0;
-	while (i < 5)
+	while (i < 6)
 	{
 		if (format[p] == func[i].fo[0])
 			return (func[i].write_fun);
