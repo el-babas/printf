@@ -83,13 +83,11 @@ int convert_base(int base, unsigned int num, int h)
 		num = num / base;
 		ptr--, i++;
 	}
-	ptr = '\0';
 	while (i > 0)
 	{
 		_putchar(temp[j]);
 		j++, i--;
 	}
 	free(temp);
-	free(ptr);
 	return (_length);
 }
