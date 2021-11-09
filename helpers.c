@@ -68,8 +68,14 @@ int convert_base(int base, unsigned int num, int h)
 	int i = 0, j = 0;
 
 	_strncpy(buf, (h == 0) ? "0123456789ABCDEF" : "0123456789abcdef", 17);
+	if (n == 0)
+	{
+		_putchar(48);
+		return(1);
+	}
 	while (n /= base)
 		_length++;
+	if (base == 2 && (_length == 0 &&)
 	temp = malloc(sizeof(char) * (_length + 1));
 	if (temp == NULL)
 	{
