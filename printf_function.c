@@ -17,16 +17,16 @@ int (*get_format_func(const char *format, int p))(va_list)
 		{"s", write_str},
 		{"%", write_perc},
 		{NULL, NULL}
-};
+	};
 
 	int i;
 
 	i = 0;
-	while (i < 4)
+	while (i < 3)
 	{
 		if (format[p] == func[i].fo[0])
-			break;
+			return (func[i].write_fun);
 		i++;
 	}
-	return (func[i].write_fun);
+	return (NULL);
 }
