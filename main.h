@@ -25,6 +25,8 @@ int _putchar(char c);
 int write_char(va_list args);
 int write_str(va_list args);
 int write_perc(va_list args);
+int write_num(va_list args);
+int print_number(int n);
 
 int (*get_format_func(const char *format, int p))(va_list);
 
