@@ -8,8 +8,7 @@
 int _printf(const char *format, ...)
 {
 	char *str_malloc;
-	unsigned int byte_str = 0;
-	int x = 0;
+	unsigned int byte_str = 0, x = 0;
 	int (*chosen_fun)(va_list, char*, unsigned int);
 	va_list args;
 
@@ -26,18 +25,19 @@ int _printf(const char *format, ...)
 	for (x = 0; *(format + x); x++)
 	{
 		if (*(format + x) != '%')
-		{
 			byte_str = fill_malloc(str_malloc, *(format + x), byte_str);
-		}
 		else
 		{
-			if (*(format + (x + 1)) == '\0' || *(format + (x + 1)) == ' ')
+			if (*(format + (x + 1)) == '\0')
 				break;
 			chosen_fun = get_format_func(format, x + 1);
 			if (chosen_fun != NULL)
+				byte_str += chosen_fun(args, str_malloc, byte_str), x++;
+			else
 			{
-				byte_str += chosen_fun(args, str_malloc, byte_str);
-				x++;
+				if (*(format + (x + 1)) == ' ' && *(format + (x + 2)) == '\0')
+					return (-1);
+				byte_str = fill_malloc(str_malloc, *(format + x), byte_str), x--;
 			}
 		}
 	}
