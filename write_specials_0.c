@@ -3,7 +3,7 @@
 /**
  * write_bin - prints digit in binary form
  *
- * @args: list of args
+ * @arg: list of args
  *
  * Return: length of chars written on Success
  * otherwise, returns 0 or -1
