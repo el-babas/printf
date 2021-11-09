@@ -12,27 +12,11 @@
  */
 int write_address(va_list args, char *str_malloc, unsigned int pos)
 {
-	int len = 0;
-	uintptr_t x = (uintptr_t)va_arg(args, int);
-	char buff[2 + sizeof(x) * 2];
-	size_t i;
-
-	(void)pos;
-	(void)buff;
+	(void)args;
 	(void)str_malloc;
-	buff[0] = '0';
-	buff[1] = 'x';
-	for (i = 0; i < sizeof(x) * 2; i++)
-	{
-		/*
-		 * For now do nothing
-		 * buff[i + 2] = "0123456789abcdef"[(x >> ((sizeof(x)
-		 * 2 - 1 - i) * 4)) & 0xf];
-		 */
-	}
-	buff[2 + sizeof(x) * 2 + 1] = '\0';
-	len = 0;
-	return (len);
+	(void)pos;
+	
+	return (0);
 }
 
 /**
