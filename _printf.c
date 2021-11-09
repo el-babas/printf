@@ -32,13 +32,13 @@ int _printf(const char *format, ...)
 				return (-1);
 			chosen_fun = get_format_func(format, x + 1);
 			if (chosen_fun != NULL)
-			{
 				_length += chosen_fun(args);
-			}
 			else
 			{
 				if (format[x + 1] != '\0')
-					continue;
+				{
+					_putchar(format[x]), x--, _length++;
+				}
 				else
 					return (-1);
 			}
