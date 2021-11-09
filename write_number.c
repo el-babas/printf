@@ -45,7 +45,7 @@ int write_unint (va_list args, char *str_malloc, unsigned int pos)
 
 	if (number == NULL)
 		return (0);
-	
+
 	len = convert_base(10, number, str_malloc, pos, 0);
 	return (len);
 }
