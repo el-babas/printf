@@ -29,6 +29,10 @@ int write_perc(va_list args);
 int write_num(va_list args);
 int print_number(int n);
 int write_bin(va_list args);
+int write_octal(va_list args);
+int write_HEXA(va_list args);
+int write_hexa(va_list args);
+int write_unint(va_list arg);
 char *_strncpy(char *dest, char *src, int n);
 int convert_base(int base, unsigned int num, int h);
 
