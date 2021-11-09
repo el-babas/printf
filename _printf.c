@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int _length = 0, x = 0;
 	int (*chosen_fun)(va_list);
-	
+
 	va_start(args, format);
 	if (format == NULL || (*(format) == '%' && *(format + 1) == '\0'))
 		return (-1);
