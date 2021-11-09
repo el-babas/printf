@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[x + 1] == ' ' && (format[x + 2] >= 48 && format[x + 1] <= 57))
+			if (format[x + 1] == ' ' && (format[x + 2] >= 48 && format[x + 2] <= 57))
 				return (-1);
 			if (format[x + 1] == '\0')
 				return (-1);
