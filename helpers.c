@@ -18,6 +18,7 @@ int print_number(int n)
 	{
 		_putchar(45);
 		n *= -1;
+		_length++;
 	}
 	r = n;
 
