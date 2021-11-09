@@ -15,7 +15,7 @@ int write_address(va_list args, char *str_malloc, unsigned int pos)
 	(void)args;
 	(void)str_malloc;
 	(void)pos;
-	
+
 	return (0);
 }
 
