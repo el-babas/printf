@@ -26,6 +26,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[x + 1] == ' ' && (format[x + 2] >= 48 && format[x + 1] <= 57))
+				return (-1);
+			if (format[x + 1] == '\0')
+				return (-1);
 			chosen_fun = get_format_func(format, x + 1);
 			if (chosen_fun != NULL)
 			{
@@ -33,10 +37,10 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				if (format[x + 1] == '\0')
-				{
+				if (format[x + 1] != '\0')
+					continue;
+				else
 					return (-1);
-				}
 			}
 			x++;
 		}
