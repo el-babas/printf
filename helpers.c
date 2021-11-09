@@ -91,5 +91,5 @@ int convert_base(int base, unsigned int num, int h)
 	}
 	free(temp);
 	free(ptr);
-	return (_length);
+	return (_length - 1);
 }
