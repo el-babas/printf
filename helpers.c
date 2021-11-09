@@ -71,7 +71,7 @@ int convert_base(int base, unsigned int num, int h)
 	if (n == 0)
 	{
 		_putchar(48);
-		return(1);
+		return (1);
 	}
 	while (n /= base)
 		_length++;
