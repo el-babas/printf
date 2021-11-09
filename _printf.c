@@ -31,6 +31,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (*(format + (x + 1)) == '\0' || *(format + (x + 1)) == ' ')
+				break;
 			chosen_fun = get_format_func(format, x + 1);
 			if (chosen_fun != NULL)
 			{
@@ -39,10 +41,10 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-	/* print string reserved in malloc */
-	write_malloc(str_malloc, byte_str);
-	/* free reserve memory */
-	free(str_malloc);
-	va_end(args);
-	return (byte_str);
+	/* print string and free reserved in malloc */
+	write_malloc(str_malloc, byte_str), free(str_malloc), va_end(args);
+	if (*(format + x) == '\0')
+		return (byte_str);
+	else
+		return (-1);
 }
