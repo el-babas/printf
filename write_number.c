@@ -8,7 +8,7 @@
  *
  * Return: length write
  */
-int write_int (va_list args, char *str_malloc, unsigned int pos)
+int write_int(va_list args, char *str_malloc, unsigned int pos)
 {
 	int number = va_arg(args, int);
 	int len = 0;
@@ -22,8 +22,9 @@ int write_int (va_list args, char *str_malloc, unsigned int pos)
 
 	if (len == 0)
 	{
-		pos = fill_malloc(str_malloc, '\0', pos - 1);
+		pos = fill_malloc(str_malloc, '\0', pos);
 	}
+
 	return (len);
 }
 
@@ -35,7 +36,7 @@ int write_int (va_list args, char *str_malloc, unsigned int pos)
  *
  * Return: length write
  */
-int write_unint (va_list args, char *str_malloc, unsigned int pos)
+int write_unint(va_list args, char *str_malloc, unsigned int pos)
 {
 	unsigned long int number = va_arg(args, unsigned long int);
 	int len = 0;

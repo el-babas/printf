@@ -25,6 +25,7 @@ int (*get_format_func(const char *format, int p))(va_list, char*, unsigned int)
 		{"x", write_hexa},
 		{"X", write_HEXA},
 		{"p", write_address},
+		{"r", write_un},
 		{" ", NULL},
 		{NULL, NULL}
 	};
@@ -32,7 +33,7 @@ int (*get_format_func(const char *format, int p))(va_list, char*, unsigned int)
 	int i;
 
 	i = 0;
-	while (i < 12)
+	while (i < 13)
 	{
 		if (format[p] == func[i].fo[0])
 			break;

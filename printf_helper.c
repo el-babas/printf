@@ -38,6 +38,30 @@ char *_strncpy(char *dest, char *src, int n)
 }
 
 /**
+ * reverse_array - reverse an array
+ *
+ * @a: array to be reversed
+ *
+ * Return: none - void function
+ *
+ */
+void reverse_array(char *a)
+{
+	char temp;
+	int beg = 0;
+	int end = _strlen(a) - 1;
+
+	while (beg < end)
+	{
+		temp = a[beg];
+		a[beg] = a[end];
+		a[end] = temp;
+		beg++;
+		end--;
+	}
+}
+
+/**
  * convert_base - print number as chars using any base
  *
  * @base: number base convert
@@ -62,17 +86,19 @@ int convert_base(int base, unsigned int num, char *s, unsigned int pos, int h)
 		count++;
 		n /= base;
 	}
-	temp = malloc(sizeof(char) * (count + 1));
+	temp = malloc(sizeof(char) * (count + 2));
 	if (temp == NULL)
+	{
+		free(temp);
 		return (0);
-	ptr = &temp[count + 1];
-	while (num)
+	}
+	ptr = &temp[count];
+	while (num > 0)
 	{
 		*ptr = buf[num % base];
 		num = num / base;
 		ptr--, i++;
 	}
-	ptr[count + 1] = '\0';
 
 	while (i >= 0)
 	{

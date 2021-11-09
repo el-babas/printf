@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * struct format_print - choose functions format
@@ -40,8 +41,11 @@ int write_octal(va_list args, char *str_malloc, unsigned int pos);
 int write_address(va_list args, char *str_malloc, unsigned int pos);
 int write_perc(va_list args, char *str_malloc, unsigned int pos);
 int write_bin(va_list args, char *str_malloc, unsigned int pos);
-int _strlen(char *s);
+int write_un(va_list args, char *str_malloc, unsigned int pos);
 
+int _strlen(char *s);
+char *_strncpy(char *dest, char *src, int n);
+void reverse_array(char *a);
 int convert_base(int, unsigned int, char *, unsigned int, int);
 
 #endif

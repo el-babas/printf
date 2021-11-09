@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (*(format) == '\0')
 		return (0);
-
+	memset(str_malloc, '\0', W_BUFFER);
 	va_start(args, format);
 	for (x = 0; *(format + x); x++)
 	{
