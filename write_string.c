@@ -1,26 +1,28 @@
 #include "main.h"
-
 /**
  * write_char - print %c
  * @args: string ...
+ * @str_malloc: buffer reserved
+ * @pos: position
  *
  * Return: length write
  */
-int write_char(va_list args)
+int write_char(va_list args, char *str_malloc, unsigned int pos)
 {
 	char letter = va_arg(args, int);
 
-	_putchar(letter);
+	fill_malloc(str_malloc, letter, pos);
 	return (1);
 }
-
 /**
  * write_str - print %s
  * @args: string ...
+ * @str_malloc: buffer reserved
+ * @pos: position
  *
  * Return: length write
  */
-int write_str(va_list args)
+int write_str(va_list args, char *str_malloc, unsigned int pos)
 {
 	int i = 0;
 	char *letters = va_arg(args, char *);
@@ -30,28 +32,15 @@ int write_str(va_list args)
 	{
 		for (i = 0; *(letters + i); i++)
 		{
-			_putchar(*(letters + i));
+			pos = fill_malloc(str_malloc, *(letters + i), pos);
 		}
 	}
 	else
 	{
 		for (i = 0; *(isnull + i); i++)
 		{
-			_putchar(*(isnull + i));
+			pos = fill_malloc(str_malloc, *(isnull + i), pos);
 		}
 	}
 	return (i);
-}
-
-/**
- * write_perc - print percentage
- * @args: string ...
- *
- * Return: length write
- */
-int write_perc(va_list args)
-{
-	(void)args;
-	_putchar(37);
-	return (1);
 }
