@@ -72,11 +72,7 @@ The format string is a character string, beginning and ending in its initial shi
 _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 5, 5);
 ``` 
 #### result:
-```
-![alt text]
-("https://github.com/cristhian1107/printf/blob/assets/Example_1.PNG")
-```
-
+<img src="https://github.com/cristhian1107/printf/blob/assets/Example_1.PNG?raw=true">
 
 # Supported Functionality
 
@@ -122,16 +118,19 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 
 
 ##### Please feel free to contact us regarding any matter (specially about mistakes, recomendations and gramar errors)
-Thank you,
 
-* Cristhian Apaza - 
+<p align="center">
+Cristhian Apaza - 
 <a href="https://github.com/cristhian1107">
         <img src="https://img.shields.io/badge/Cristhian-mainPage-blue">
 </a>
-* Carlos Bentin -
+</p>
+
+
+
+<p align="center">
+Carlos Bentin -
 <a href="https://github.com/Benkdel">
         <img src="https://img.shields.io/badge/Carlos-mainPage-blue">
 </a>
-
-| 
-
+</p>
