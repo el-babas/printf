@@ -64,7 +64,7 @@ The function **_printf** produce output according to a format described below, d
 # Format
 The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subequents arguments. Each conversion specification is introduced by the character %, and ends with a conversion specifier, like this:
 
-<h4 align="center"> % [FLAGS][width][.precision][length]specifier<h4\>
+<h4 align="center"> % [FLAGS][width][.precision][length]specifier</h4>
 
 
 ### example
@@ -73,13 +73,65 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 ``` 
 #### result:
 ```
-
+![alt text]
+("https://github.com/cristhian1107/printf/blob/assets/Example_1.PNG")
 ```
 
 
 # Supported Functionality
 
 #### Supported features:
+
+##### FLAGS
+|  Flag   |             Output                                         |   Syntaxis    | Example |
+|---------|------------------------------------------------------------|---------------|---------|
+|   +     |  Adds + in front of output                                 | ("%+d", 250)  | "+250"  |
+|   space |  Adds '_' in front of ouput                                | ("% d", 250)  | " 250"  |
+|   #     | Alters format to o, x or X. prefixes 0 for non 0 numbers   | ("%#x", 250)  |  "0xfa" |
+
+
+##### SPECIFIERS
+
+|  Spec   |             Output           |   Syntaxis    |    Example    |
+|---------|------------------------------|---------------|---------------|
+|   c     | character                    | ("%c", 'A')   |  "A"          |
+|   s     | String                       | ("%s", "ABC") |  "ABC"        |
+|   d     | Decimal                      | ("%d", 250)   |  "250"        |
+|   i     | Integer                      | ("%i", 250)   |  "250"        |
+|   u     | Unsigned Int                 | ("%u", 250)   |  "250"        |
+|   o     | Octal                        | ("%o", 250)   |  "372"        |
+|   x     | Hexadecimal (no caps)        | ("%x", 250)   |  "fa"         |
+|   X     | Hexadecimal (CAPS)           | ("%X", 250)   |  "FA"         |
+|   b     | Binary                       | ("%b", 250)   |  "11111010"   |
+
+
+
+# Work n Progress
+
+#### We are currently working on adding the following format options to the library:
+* Adding to ***s*** - Print Non-printable characters as "\x" followed by ASCII code value in Upper Case Hexadecimal
+* Adding **[p]** - Printing memory adress
+* Adding **length modifiers [l] [h]**
+* Adding **width modifiers**
+* Adding **precision modifiers**
+* Adding additional flags: **[0]**, **[-]**
+* Adding **[r]** - To Reverse string before printing
+* Adding **[R]** - Encode string with ROT13 before printing
+
+# Contact Information
+
+
+##### Please feel free to contact us regarding any matter (specially about mistakes, recomendations and gramar errors)
+Thank you,
+
+* Cristhian Apaza - 
+<a href="https://github.com/cristhian1107">
+        <img src="https://img.shields.io/badge/Cristhian-mainPage-blue">
+</a>
+* Carlos Bentin -
+<a href="https://github.com/Benkdel">
+        <img src="https://img.shields.io/badge/Carlos-mainPage-blue">
+</a>
 
 | 
 
