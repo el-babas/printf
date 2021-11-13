@@ -46,5 +46,5 @@ int _printf(const char *format, ...)
 	if (gargabe_collector_2(&m_buffer, state, sub_state) < 0)
 		return (-1);
 	write_buffer(&m_buffer), free(m_buffer.buffer_data);
-	return ((format[i] == '\0') ? m_buffer.len : -1);
+	return ((format[i] == '\0') ? (int)m_buffer.len : -1);
 }
