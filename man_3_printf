@@ -17,7 +17,6 @@
 .Sh SYNOPSIS             \" Section Header - required - don't modify
 .Nm #include <main.h>
 .Pp
-
 .Nm int _printf(const char *format, ...);
 
 
@@ -62,23 +61,29 @@ zero or more flags:
 .Op length
 specifier
 .Pp a
-
+.El
 .Nm Flag characters
 .Bl -tag -width -indent
 .It +
-The value should be converted to an "alternate form". TERMINAR DESCRIPCION
-.It space
-The value should be zero padded. TERMINAR DESCRIPCION
-.It #
-The value should TERMINAR DESCRIPCION
+A sign (+ or -) should always be placed before a number
+              produced by a signed conversion.  By default, a sign is
+              used only for negative numbers.  A + overrides a space if
+              both are used.
+.It -
+The converted value is to be left adjusted on the field
+              boundary.  (The default is right justification.)  The
+              converted value is padded on the right with blanks, rather
+              than on the left with blanks or zeros.  A - overrides a 0
+              if both are given.
+The value should
 .El
-.Nm Field width
-.Bl -tag -width -indent
-.It TODO TERMINAR DESCIPCION
+.\".Nm Field width
+.\".Bl -tag -width -indent
+.\".It TODO TERMINAR DESCIPCION
 .El
 .Nm Length modifier
 .Pp
-
+.Pp
 Here, "integer conversion" stands for d, i, o, u, x, or X conversion.
 .Pp
 .Pp
@@ -116,11 +121,9 @@ Modifiers not covered by the standard library pintf function
 .Pp
 .Bl -tag -width -intent
 .It r
-The output .... TERMINAR DESCRIPCION
-.It -
-The output ..... TERMINAR DESCRIPCION
+The output .... print the string in reverse
 .It R
-The output .... TERMINAR DESCRIPCION
+The output .... print the chain of rot13
 .El
 .Pp
 .Sh RETURN VALUE
@@ -139,13 +142,13 @@ If an output error is encountered, a negative value is returned
 .\" .It Ev ENV_VAR_2
 .\" Description of ENV_VAR_2
 .\" .El
-.Sh FILES                \" File used or created by the topic of the man page
-.Bl -tag -width -intent
-.It Pa /usr/share/file_name
-FILE_1 description
-.It Pa /Users/joeuser/Library/really_long_file_name
-FILE_2 description
-.El                      \" Ends the list
+.\".Sh FILES                \" File used or created by the topic of the man page
+.\".Bl -tag -width -intent
+.\".It Pa /usr/share/file_name
+.\"FILE_1 description
+.\".It Pa /Users/joeuser/Library/really_long_file_name
+.\"FILE_2 description
+.\".El                      \" Ends the list
 .\" .Sh DIAGNOSTICS       \" May not be needed
 .\" .Bl -diag
 .\" .It Diagnostic Tag
