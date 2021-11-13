@@ -46,5 +46,8 @@ void check_overflow(struct main_buffer *m_buffer, unsigned int new_bytes)
 	int _overflow = ((int)m_buffer->index + (int)new_bytes - BUFFERSIZE);
 
 	if (_overflow >= 0)
+	{
 		write_buffer(m_buffer);
+		m_buffer->index = 0;
+	}
 }
