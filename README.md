@@ -117,7 +117,6 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 * Adding **width modifiers**
 * Adding **precision modifiers**
 * Adding additional flags: **[0]**, **[-]**
-* Adding **[r]** - To Reverse string before printing
 * Adding **[R]** - Encode string with ROT13 before printing
 
 # Contact Information
