@@ -6,16 +6,13 @@ int main(int argc, char **argv)
 	long int l = INT_MIN;
 	long int lm = UINT_MAX;
 	long res = INT_MAX;
-	char *str = "When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. The \"overall options\" allow you to stop this process at an intermediate stage. For example, the -c option says not to run the linker. Then the output consists of object files output by the assembler.\n\nOther options are passed on to one stage of processing. Some options control the preprocessor and others the compiler itself. Yet other options control the assembler and linker; most of these are not documented here, since you rarely need to use any of them.\n\nMost of the command line options that you can use with GCC are useful for C programs; when an option is only useful with another language (usually C ++ ), the explanation says so explicitly. If the description for a particular option does not mention a source language, you can use that option with all supported languages.\n\nThe gcc program accepts options and file names as operands. Many options have multi-letter names; therefore multiple single-letter options may not%d\n";
-
 	int TASK_NUM = 0;
 
 	(void)l;
 	(void)lm;
 	(void)res;
 	(void)argc;
-	(void)str;
-
+	
 	if (argc > 2)
 	{
 		printf("program only accepts 1 parameter: number of the task to perform");
@@ -521,25 +518,17 @@ int main(int argc, char **argv)
 		break;
 
 	case 11:
-		_printf("%c\n", 'A');
-		_printf("%s\n", "ABC");
-		_printf("%d\n", 250);
-		_printf("%i\n", 250);
-		_printf("%u\n", 250);
-		_printf("%o\n", 250);
-		_printf("%x\n", 250);
-		_printf("%X\n", 250);
-		_printf("%b\n", 250);
+		printf("TEST CASES FOR TASK %d\n======================\n======================\n\n", TASK_NUM);	
+		printf("PRUEBA 41  ============================\n");
+		len2 = printf("% +i + %+ i = % +d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX)); printf("\n%d\n", len2);
+		len = _printf("% +i + %+ i = % +d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX)); printf("\n%d\n", len);
+		fflush(stdout);
+		printf("PRUEBA 42  ============================\n");
+		len2 = printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX)); printf("\n%d\n", len2);
+		len = _printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX)); printf("\n%d\n", len);
+		fflush(stdout);
 		break;
 
-	case 5:
-		printf("TEST CASES FOR TASK %d\n======================\n======================\n\n", TASK_NUM);	
-		printf("PRUEBA 2  ============================\n");
-		len2 = printf(str, 123456789); printf("\n%d\n", len2); 
-		len = _printf(str, 123456789); printf("\n%d\n", len);
-		fflush(stdout);
-			
-		break;
 	}
 		
 

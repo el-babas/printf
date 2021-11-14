@@ -46,7 +46,8 @@ int form_state(int sb, int *s, struct main_buffer *m_buffer, char f)
 	switch (sb)
 	{
 	case FLAGS_SUB_STATE:
-		m_buffer->f = get_sub_mod(f, sb);
+		if (m_buffer->f != FLAGS_PLUS)
+			m_buffer->f = get_sub_mod(f, sb);
 		break;
 	case PREC_SUB_STATE:
 		m_buffer->p = get_sub_mod(f, sb);
@@ -58,6 +59,5 @@ int form_state(int sb, int *s, struct main_buffer *m_buffer, char f)
 		isTrue = 0;
 		break;
 	}
-
 	return (isTrue);
 }
