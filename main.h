@@ -88,6 +88,7 @@ void struct_init (struct main_buffer *m_buffer);
 void convert_base(struct main_buffer *main_buffer, int, unsigned int, int);
 char *_strncpy(char *, char *, int);
 int _strlen(char *);
+void reverse_string(struct main_buffer *m_buffer, char *str);
 
 void write_str(va_list, struct main_buffer *m_buffer);
 void write_char(va_list, struct main_buffer *m_buffer);
@@ -97,5 +98,6 @@ void write_hexa(va_list, struct main_buffer *m_buffer);
 void write_HEXA(va_list, struct main_buffer *m_buffer);
 void write_octal(va_list, struct main_buffer *m_buffer);
 void write_unint(va_list, struct main_buffer *m_buffer);
+void write_r_str(va_list args, struct main_buffer *m_buffer);
 
 #endif

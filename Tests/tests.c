@@ -529,8 +529,15 @@ int main(int argc, char **argv)
 		fflush(stdout);
 		break;
 
+	case 14:
+		printf("TEST CASES FOR TASK %d\n======================\n======================\n\n", TASK_NUM);	
+		printf("PRUEBA 0  ============================\n");
+		len2 = printf("!sgra_av morf deveirter si ecnetnes sihT\n"); printf("\n%d\n", len2);
+		len = _printf("%r", "\nThis sentence is retrieved from va_args!"); printf("\n%d\n", len);
+		fflush(stdout);
+		break;
 	}
-		
+	
 
 
 	return (0);

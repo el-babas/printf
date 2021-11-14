@@ -86,6 +86,12 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 |   #     | Alters format to o, x or X. prefixes 0 for non 0 numbers   | ("%#x", 250)  |  "0xfa" |
 
 
+##### SPECIAL CASES:
+|  CASE   |             Output                                         |   Syntaxis    | Example |
+|---------|------------------------------------------------------------|---------------|---------|
+|   r     |  prints string in reverse                                  | ("%r", "ABC") |  "CBA"  |
+
+
 ##### SPECIFIERS
 
 |  Spec   |             Output           |   Syntaxis    |    Example    |

@@ -91,7 +91,7 @@ void reverse_string(struct main_buffer *m_buffer, char *str)
 {
 	int x = 0;
 
-	while (*(str + x))
+	while (str[x])
 		x++;
 	for (x = x - 1; x >= 0; x--)
 	{

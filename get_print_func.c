@@ -20,13 +20,14 @@ void (*get_format_func(const char f))(va_list, struct main_buffer *)
 		{"X", write_HEXA},
 		{"o", write_octal},
 		{"u", write_unint},
+		{"r", write_r_str},
 		{NULL, NULL}
 	};
 
 	int i;
 
 	i = 0;
-	while (i < 9)
+	while (i < 10)
 	{
 		if (f == func[i].fo[0])
 			return (func[i].write_fun);

@@ -48,3 +48,23 @@ void write_str(va_list args, struct main_buffer *m_buffer)
 	}
 }
 
+/**
+ * write_r_str - print %s
+ * @args: string ...
+ * @m_buffer: main data struct
+ *
+ * Return: none - void function
+ */
+void write_r_str(va_list args, struct main_buffer *m_buffer)
+{
+	char *letters = va_arg(args, char *);
+	char *str = letters = NULL ? "(null)" : letters;
+
+	if (m_buffer != NULL)
+	{
+		if (m_buffer->f > 0)
+			flags_modifier(m_buffer);
+	}
+	reverse_string(m_buffer, str);
+}
+
