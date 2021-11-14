@@ -1,24 +1,28 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string
- * @s: string
+ * write_in_rot13 - encodes a string
+ * @args: string
  * @m_buffer: main data struct
  * Return: none - void function
  */
-void write_in_rot13(struct main_buffer *m_buffer, char *s)
+void write_in_rot13(va_list args, struct main_buffer *m_buffer)
 {
-	int x, y;
+	unsigned char *str = va_arg(args, unsigned char*);
+	int x, y, len;
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (x = 0; s[x]; x++)
+	len = _strlen((char *)str);
+	check_overflow(m_buffer, len);
+
+	for (x = 0; str[x]; x++)
 	{
 		for (y = 0; letters[y]; y++)
 		{
-			if (s[x] == letters[y])
+			if (str[x] == letters[y])
 			{
-				s[x] = rot13[y];
+				push_char(m_buffer, rot13[y]);
 				break;
 			}
 		}

@@ -99,6 +99,6 @@ void write_HEXA(va_list, struct main_buffer *m_buffer);
 void write_octal(va_list, struct main_buffer *m_buffer);
 void write_unint(va_list, struct main_buffer *m_buffer);
 void write_r_str(va_list args, struct main_buffer *m_buffer);
-void rot13(struct main_buffer *m_buffer, char *s);
+void write_in_rot13(va_list args, struct main_buffer *m_buffer);
 
 #endif

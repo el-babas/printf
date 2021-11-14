@@ -536,6 +536,21 @@ int main(int argc, char **argv)
 		len = _printf("%r", "\nThis sentence is retrieved from va_args!"); printf("\n%d\n", len);
 		fflush(stdout);
 		break;
+	case 15:
+		printf("TEST CASES FOR TASK %d\n======================\n======================\n\n", TASK_NUM);	
+		printf("PRUEBA 0  ============================\n");
+		len2 = printf("Complete the sentence: You  nothing, Jon Snow.\n"); printf("\n%d\n", len2);
+		len = _printf("Complete the sentence: You %R nothing, Jon Snow.\n", ""); printf("\n%d\n", len);
+		fflush(stdout);
+		printf("PRUEBA 1  ============================\n");
+		len2 = printf("Complete the sentence: You know nothing, Jon Snow.\n"); printf("\n%d\n", len2);
+		len = _printf("Complete the sentence: You %R nothing, Jon Snow.\n", "xabj"); printf("\n%d\n", len);
+		fflush(stdout);
+		printf("PRUEBA 2  ============================\n");
+		len2 = printf("This sentence is retrieved from va_args!\n"); printf("\n%d\n", len2);
+		len = _printf("%R", "Guvf fragrapr vf ergevrirq sebz in_netf!\n"); printf("\n%d\n", len);
+		fflush(stdout);
+		break;
 	}
 	
 
