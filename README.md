@@ -90,7 +90,7 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 |  CASE   |             Output                                         |   Syntaxis    | Example |
 |---------|------------------------------------------------------------|---------------|---------|
 |   r     |  prints string in reverse                                  | ("%r", "ABC") |  "CBA"  |
-
+|   R     |  prints string encoded using ROT13                         | ("%R", "ABC") |  "NOP"  |
 
 ##### SPECIFIERS
 
@@ -117,7 +117,6 @@ _printf("Hello, %s. project took us %+d days, which in hexa is %#x\n", "World", 
 * Adding **width modifiers**
 * Adding **precision modifiers**
 * Adding additional flags: **[0]**, **[-]**
-* Adding **[R]** - Encode string with ROT13 before printing
 
 # Contact Information
 
